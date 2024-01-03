@@ -1,0 +1,28 @@
+unit mvcLive.model.entity.interfaces;
+
+interface
+
+type
+  iCliente = interface
+    function SetCodigo(Value : Integer): iCliente;
+    function GetCodigo : Integer;
+    function SetNome(Value : string): iCliente;
+    function GetNome : string;
+    function SetCidade(Value : string): iCliente;
+    function GetCidade : string;
+    function SetEstado(Value : string): iCliente;
+    function GetEstado : string;
+  end;
+
+  iProdutos = interface
+    function SetCodigo(Value : Integer): iProdutos;
+    function GetCodigo : Integer;
+    function SetDescricao(Value : string): iProdutos;
+    function GetDescricao : string;
+    function SetPrecoVenda(Value : currency): iProdutos;
+    function GetPrecoVenda : currency;
+  end;
+
+implementation
+
+end.

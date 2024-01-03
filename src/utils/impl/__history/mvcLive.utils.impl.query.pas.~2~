@@ -1,0 +1,12 @@
+unit mvcLive.utils.impl.query;
+
+interface
+
+type
+  TQuery<T : IInterface> = class
+
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+unit mvcLive.utils.interfaces;
+
+interface
+
+type
+  iQuery = interface
+    function Insert;
+    function Delete;
+    function Update;
+    function Select;
+  end;
+
+  function Utils = interface
+    function Query : iQuery;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,99 @@
+unit mvcLive.utils.impl.query;
+
+interface
+
+uses
+  System.SysUtils,
+  mvcLive.utils.interfaces;
+
+type
+  TQuery = class(TInterfacedObject, iQuery)
+    private
+      FParent : TObject;
+      function Fields : string;
+      function Params : string;
+      function NomeTabela : string;
+      constructor Create(Parent : IInterface);
+      destructor Destroy; override;
+    public
+      class function New(Parent : IInterface) : iQuery;
+      function Insert : string;
+      function Delete: string;
+      function Update: string;
+      function Select: string;
+  end;
+
+implementation
+
+uses
+  System.Rtti;
+{ TQuery }
+
+constructor TQuery.Create(Parent: IInterface);
+begin
+
+end;
+
+function TQuery.Delete: string;
+begin
+
+end;
+
+destructor TQuery.Destroy;
+begin
+
+  inherited;
+end;
+
+function TQuery.Fields: string;
+var
+  lContexto : TRttiContext;
+  lTipo : TRttiType;
+begin
+  lContexto := TRttiContext.Create;
+
+  try
+    lTipo := lContexto.GetType(FParent.ClassInfo);
+
+    for var I in lTipo.GetFields do
+    begin
+
+    end;
+
+  finally
+    lContexto.Free;
+  end;
+
+end;
+
+function TQuery.Insert: string;
+begin
+
+end;
+
+class function TQuery.New(Parent: IInterface): iQuery;
+begin
+  Result := Self.Create(Parent);
+end;
+
+function TQuery.NomeTabela: string;
+begin
+
+end;
+
+function TQuery.Params: string;
+begin
+
+end;
+
+function TQuery.Select: string;
+begin
+
+end;
+
+function TQuery.Update: string;
+begin
+
+end;
+
+end.

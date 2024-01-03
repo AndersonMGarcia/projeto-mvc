@@ -1,0 +1,7 @@
+unit mvcLive.model.connection.impl.query;
+
+interface
+
+implementation
+
+end.
